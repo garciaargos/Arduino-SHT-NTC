@@ -4,7 +4,7 @@
  * Threaded version
  * 
  * Run:
- *    root -l grTHlog_threads.cpp+
+ *    root -x grTHlog_threads.cpp+
  * 
  * Blame: Carlos García Argos (carlos.garcia.argos@cern.ch)
  * 14.06.2016

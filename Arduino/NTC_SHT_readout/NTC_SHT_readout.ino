@@ -108,7 +108,7 @@ void loop() {
           pos++;
         }
         temp[pos] = '\0';
-        wait_time = atoi(temp);
+        wait_time = atoi(temp*1000);
         if (DEBUG > 0) {
           Serial.print("SETDELAY: ");
           Serial.println(wait_time);
