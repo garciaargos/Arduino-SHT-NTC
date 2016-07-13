@@ -26,3 +26,7 @@ The only requirement is to download [ROOT](http://root.cern.ch). I've been using
 If running on Windows, you might have to adjust some things, I've only tested under Linux. The port can be specified in the function arguments:
 
 > root -x grTHlog_threads.cpp+(port_path, logfilename)
+
+Note: when entering the arguments from the command line, escape the quotation marks as '\"':
+
+> root -x grTHlog_threads.cpp+(\"/dev/ACM0\")
