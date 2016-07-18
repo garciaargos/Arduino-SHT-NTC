@@ -67,7 +67,7 @@ void refreshPlots() {
     max_h = gr[1]->GetMaximum();
     min_h = gr[1]->GetMinimum();
     
-    for (int i = 0; i < N_NTC + 2; i++) {
+    for (int i = 0; i <= N_NTC + 2; i++) {
         if (i != 1) {   // Only set the min/max values for the Temperature plots... (Will the Humidity plot update?)
             if (gr[i]->GetMaximum() > max)
                 max = gr[i]->GetMaximum();
@@ -258,6 +258,7 @@ void createPlots(int n, Float_t x, Float_t *y) {
     gr[N_NTC + 2] = new TGraph(n, &x, &y[N_NTC + 2]);
     gr[N_NTC + 2]->SetLineColor(kRed);
     gr[N_NTC + 2]->SetLineWidth(2.3);
+    mgr->Add(gr[N_NTC + 2]);
     legend_ntc->AddEntry(gr[N_NTC + 2], "Dew point", "LP");
     
     mgr_H->SetTitle("Humidity monitoring;Time;Humidity (%)");
@@ -287,7 +288,7 @@ void createPlots(int n, Float_t x, Float_t *y) {
 
 void addPoint(int n, Float_t x, Float_t *y) {
     x = x*WAIT_SECONDS; // For the time to be correct...
-    for (int i = 0; i < N_NTC + 2; i++) {
+    for (int i = 0; i <= N_NTC + 2; i++) {
         gr[i]->SetPoint(n, x, y[i]);
     }
     refreshPlots();
