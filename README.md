@@ -29,4 +29,4 @@ If running on Windows, you might have to adjust some things, I've only tested un
 
 Note: when entering the arguments from the command line, escape the quotation marks as '\"':
 
-> root -x grTHlog_threads.cpp+(\"/dev/ACM0\")
+> root -x grTHlog_threads.cpp+(\"/dev/ttyACM0\")
